@@ -1,0 +1,6 @@
+{
+  "name": "Portafolio Audiovisual IA — Ruth García",
+  "description": "Portafolio profesional y aplicación interactiva de presentación de Trabajo Final sobre Ingeniería de Prompts para Contenido Audiovisual por Ruth García Medina (INFOTEP).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { SLIDES_COLLECTION, FACILITATOR_DATA, COURSE_SPECS } from '../data/presentationData';
+import { PDF_DOCUMENT_INFO } from '../data/officialCurriculumData';
 import {
   X,
   ChevronLeft,
@@ -15,7 +16,8 @@ import {
   Mail,
   Table,
   Check,
-  Star
+  Star,
+  ExternalLink
 } from 'lucide-react';
 
 interface SlideDeckModalProps {
@@ -81,6 +83,16 @@ export const SlideDeckModal: React.FC<SlideDeckModalProps> = ({
         </div>
 
         <div className="flex items-center gap-3">
+          <a
+            href={PDF_DOCUMENT_INFO.pdfPath}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-cyan-200 bg-slate-800/80 hover:bg-slate-700 border border-cyan-500/30 rounded-lg transition-colors cursor-pointer"
+          >
+            <ExternalLink className="w-3.5 h-3.5 text-[#00C4CC]" />
+            <span>Ver PDF Oficial (38 Págs)</span>
+          </a>
+
           <button
             onClick={() => setShowThumbnails(!showThumbnails)}
             className="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 rounded-lg transition-colors cursor-pointer"

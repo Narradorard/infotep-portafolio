@@ -22,12 +22,13 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({ onOpenDeck }) => {
         </a>
 
         {/* Zone 2: 4–5 clean single-line text navigation links */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
-          <a href="#programa" className="hover:text-[#00C4CC] transition-colors whitespace-nowrap shrink-0">
-            Programa 60h
+        <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+          <a href="#programa-oficial" className="hover:text-[#00C4CC] transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 text-cyan-200">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00C4CC]"></span>
+            <span>Programa Oficial (PDF)</span>
           </a>
           <a href="#modulos" className="hover:text-[#00C4CC] transition-colors whitespace-nowrap shrink-0">
-            Módulos
+            Módulos 60h
           </a>
           <a href="#prompt-lab" className="hover:text-[#00C4CC] transition-colors whitespace-nowrap shrink-0">
             Prompt Lab

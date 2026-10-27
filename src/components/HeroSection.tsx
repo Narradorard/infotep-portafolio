@@ -4,9 +4,10 @@ import { COURSE_SPECS, FACILITATOR_DATA } from '../data/presentationData';
 
 interface HeroSectionProps {
   onOpenDeck: () => void;
+  onOpenPdfViewer: () => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDeck }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDeck, onOpenPdfViewer }) => {
   return (
     <section id="inicio" className="relative pt-8 pb-16 px-6 max-w-7xl mx-auto overflow-hidden">
       {/* Background radial glow */}
@@ -42,16 +43,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDeck }) => {
               className="flex items-center gap-3 px-6 py-3.5 text-sm font-semibold text-white bg-gradient-to-r from-[#6420FF] via-[#7B2CBF] to-[#00C4CC] hover:brightness-110 active:scale-[0.98] rounded-xl transition-all shadow-xl shadow-purple-950/40 cursor-pointer whitespace-nowrap"
             >
               <MonitorPlay className="w-4 h-4 text-cyan-200" />
-              <span>Ver Presentación Completa (Diapositivas)</span>
+              <span>Ver Presentación (Diapositivas)</span>
               <ArrowRight className="w-4 h-4" />
             </button>
-            <a
-              href="#modulos"
-              className="flex items-center gap-2 px-5 py-3.5 text-sm font-medium text-slate-300 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-800 rounded-xl transition-all cursor-pointer whitespace-nowrap"
+            <button
+              onClick={onOpenPdfViewer}
+              className="flex items-center gap-2 px-5 py-3.5 text-sm font-medium text-slate-200 hover:text-white bg-slate-900/90 hover:bg-slate-800 border border-purple-500/30 rounded-xl transition-all cursor-pointer whitespace-nowrap"
             >
-              <BookOpen className="w-4 h-4 text-purple-400" />
-              <span>Explorar Malla Curricular</span>
-            </a>
+              <BookOpen className="w-4 h-4 text-[#00C4CC]" />
+              <span>Consultar Programa Oficial (PDF)</span>
+            </button>
           </div>
 
           {/* Trust markers */}

@@ -3,19 +3,26 @@ import { TopNavbar } from './components/TopNavbar';
 import { HeroSection } from './components/HeroSection';
 import { FacilitatorSection } from './components/FacilitatorSection';
 import { ModulesCurriculum } from './components/ModulesCurriculum';
+import { OfficialCurriculumConsultation } from './components/OfficialCurriculumConsultation';
 import { InteractivePromptStudio } from './components/InteractivePromptStudio';
 import { ProjectSimulator10s } from './components/ProjectSimulator10s';
 import { EvaluationRubric } from './components/EvaluationRubric';
 import { FooterSection } from './components/FooterSection';
 import { SlideDeckModal } from './components/SlideDeckModal';
+import { PDFViewerModal } from './components/PDFViewerModal';
 
 export default function App() {
   const [isDeckOpen, setIsDeckOpen] = useState<boolean>(false);
   const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0);
+  const [isPdfViewerOpen, setIsPdfViewerOpen] = useState<boolean>(false);
 
   const handleOpenDeck = (slideIndex = 0) => {
     setActiveSlideIndex(slideIndex);
     setIsDeckOpen(true);
+  };
+
+  const handleOpenPdf = () => {
+    setIsPdfViewerOpen(true);
   };
 
   return (
@@ -29,7 +36,13 @@ export default function App() {
       {/* Main Portfolio Content */}
       <main className="flex-1">
         {/* Split-Screen Hero & Full-Width Metrics */}
-        <HeroSection onOpenDeck={() => handleOpenDeck(0)} />
+        <HeroSection
+          onOpenDeck={() => handleOpenDeck(0)}
+          onOpenPdfViewer={handleOpenPdf}
+        />
+
+        {/* Official Curriculum Consultation Section (Direct consultation of the 38-page INFOTEP document) */}
+        <OfficialCurriculumConsultation onOpenPdfViewer={handleOpenPdf} />
 
         {/* 4 Curricular Modules (60 Hours) */}
         <ModulesCurriculum />
@@ -55,6 +68,12 @@ export default function App() {
         isOpen={isDeckOpen}
         onClose={() => setIsDeckOpen(false)}
         initialSlideIndex={activeSlideIndex}
+      />
+
+      {/* PDF Viewer Consultation Modal */}
+      <PDFViewerModal
+        isOpen={isPdfViewerOpen}
+        onClose={() => setIsPdfViewerOpen(false)}
       />
     </div>
   );

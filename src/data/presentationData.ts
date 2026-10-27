@@ -1,3 +1,8 @@
+import ruthPortrait from '../assets/images/avatar_ruth_garcia_1793134186814.jpg';
+import heroImageAsset from '../assets/images/hero_audiovisual_ai_studio_1793134186625.jpg';
+import storyboardImage from '../assets/images/module_storyboard_prompts_1793134187496.jpg';
+import audioVideoImage from '../assets/images/module_audio_video_synth_1793134187979.jpg';
+
 export interface Module {
   id: number;
   title: string;
@@ -39,8 +44,8 @@ export const FACILITATOR_DATA = {
   phoneRaw: "8292990544",
   email: "marketingandcoach@gmail.com",
   institution: "INFOTEP (Instituto Nacional de Formación Técnico Profesional)",
-  avatar: "/src/assets/images/avatar_ruth_garcia_1793134186814.jpg",
-  heroImage: "/src/assets/images/hero_audiovisual_ai_studio_1793134186625.jpg",
+  avatar: ruthPortrait,
+  heroImage: heroImageAsset,
   quote: {
     text: "La inteligencia artificial es una herramienta. La elección sobre cómo se utiliza depende de nosotros.",
     author: "Dra. Fei-Fei Li",
@@ -82,7 +87,7 @@ export const MODULES_DATA: Module[] = [
     ],
     deliverable: "Banco de 5 prompts maestros iterados para conceptualización de contenidos.",
     tools: ["ChatGPT", "Gemini", "Meta AI"],
-    image: "/src/assets/images/module_storyboard_prompts_1793134187496.jpg"
+    image: storyboardImage
   },
   {
     id: 2,
@@ -98,7 +103,7 @@ export const MODULES_DATA: Module[] = [
     ],
     deliverable: "Guion audiovisual tabulado de 30 segundos con storyboard de 4 escenas clave.",
     tools: ["Gemini 1.5/2.5", "Midjourney", "Canva Magic Studio"],
-    image: "/src/assets/images/module_storyboard_prompts_1793134187496.jpg"
+    image: storyboardImage
   },
   {
     id: 3,
@@ -114,7 +119,7 @@ export const MODULES_DATA: Module[] = [
     ],
     deliverable: "Pistas maestras de audio (voz + música) y secuencias de video generadas con IA.",
     tools: ["ElevenLabs", "Suno AI", "Runway Gen-3", "Pika Labs"],
-    image: "/src/assets/images/module_audio_video_synth_1793134187979.jpg"
+    image: audioVideoImage
   },
   {
     id: 4,
@@ -130,7 +135,7 @@ export const MODULES_DATA: Module[] = [
     ],
     deliverable: "Pieza audiovisual final lista para emisión (10 a 30 segundos) con ficha de prompts.",
     tools: ["CapCut / Premiere", "Canva Video Suite", "Submagic"],
-    image: "/src/assets/images/hero_audiovisual_ai_studio_1793134186625.jpg"
+    image: heroImageAsset
   }
 ];
 

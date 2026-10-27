@@ -1,3 +1,7 @@
+import heroImageAsset from '../assets/images/hero_audiovisual_ai_studio_1793134186625.jpg';
+import storyboardImage from '../assets/images/module_storyboard_prompts_1793134187496.jpg';
+import audioVideoImage from '../assets/images/module_audio_video_synth_1793134187979.jpg';
+
 import React, { useState, useEffect } from 'react';
 import { Play, Pause, RotateCcw, Video, Film, Sparkles, Volume2, Camera, CheckCircle2 } from 'lucide-react';
 
@@ -23,7 +27,7 @@ const SCENES: SceneStep[] = [
     prompt: "Extreme macro shot of human eye widening in awe with reflection of neon purple and cyber cyan holographic interface in retina, shallow depth of field, 35mm film grain, cinematic lighting.",
     audioVoiceover: "“¿Sabías que una idea de 10 segundos puede cambiar una marca entera?” (Locución juvenil enérgica).",
     visualDescription: "Reflexión cibernética en el iris del protagonista con destellos violeta y turquesa.",
-    image: "/src/assets/images/module_audio_video_synth_1793134187979.jpg"
+    image: audioVideoImage
   },
   {
     secondsRange: "03s — 07s",
@@ -34,7 +38,7 @@ const SCENES: SceneStep[] = [
     prompt: "Fast whip-pan transition into a creative designer manipulating floating glowing storyboard panels in mid-air, volumetric light rays, electric cyan particles, cinematic motion blur.",
     audioVoiceover: "“Con un prompt preciso, tu mente programa la pantalla sin tocar una sola línea de código.”",
     visualDescription: "Transición cinemática acelerada mostrando paneles de storyboard flotantes e interactivos.",
-    image: "/src/assets/images/module_storyboard_prompts_1793134187496.jpg"
+    image: storyboardImage
   },
   {
     secondsRange: "07s — 10s",
@@ -45,7 +49,7 @@ const SCENES: SceneStep[] = [
     prompt: "Smooth dolly-out camera move revealing the complete modern studio workspace, bold typographic title 'CREA CON IA' floating in 3D, warm studio rim lighting, fade out to black.",
     audioVoiceover: "“Aprende con Ruth García en INFOTEP. Diseña el futuro hoy.” (Crescendo musical y silencio).",
     visualDescription: "Cámara retrocede mostrando el estudio completo con logotipo y tipografía en negrita.",
-    image: "/src/assets/images/hero_audiovisual_ai_studio_1793134186625.jpg"
+    image: heroImageAsset
   }
 ];
 

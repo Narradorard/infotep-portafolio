@@ -38,7 +38,7 @@ export const PDF_DOCUMENT_INFO = {
   pagesCount: 38,
   duration: "60 horas (20 horas teóricas, 40 horas prácticas)",
   referenceDocument: "Programa Técnico en Artes Gráficas, INFOTEP (14/11/2022)",
-  pdfPath: "/assets/aistudio/Programa_Prompts_Ruth_Garcia_Completo__1__92849029.pdf"
+  pdfPath: `${import.meta.env.BASE_URL}assets/aistudio/Programa_Prompts_Ruth_Garcia_Completo__1__92849029.pdf`
 };
 
 export const OFFICIAL_UNITS_OF_COMPETENCE: CurricularUnit[] = [
